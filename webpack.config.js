@@ -1,7 +1,7 @@
 module.exports = {
-	entry: './src/Test.js',
+	entry: './src/Example.js',
 	output: {
-			library: 'Test',
+			library: 'Example',
       path: './build',
       filename: 'draft.js'
   },
