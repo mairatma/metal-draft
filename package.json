@@ -1,7 +1,7 @@
 {
   "name": "metal-draft",
   "version": "0.0.0",
-  "description": "My awesome Metal.js project",
+  "description": "Example showing how to use Draf.js inside Metal.js",
   "license": "BSD",
   "repository": "metal/metal-draft",
   "engines": {
@@ -30,11 +30,10 @@
     ]
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "draft-js": "^0.7.0",
     "metal-incremental-dom": "^1.0.0-rc.33",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "metal-jsx": "^1.0.0-rc.2",
+    "metal-react": "^0.1.0"
   },
   "devDependencies": {
     "babel-loader": "^6.2.4",

@@ -1,6 +1,6 @@
 # metal-draft
 
-My awesome Metal.js project
+Example showing how to use Draf.js inside Metal.js
 
 ## Setup
 
