@@ -1,0 +1,45 @@
+{
+  "name": "metal-draft",
+  "version": "0.0.0",
+  "description": "My awesome Metal.js project",
+  "license": "BSD",
+  "repository": "metal/metal-draft",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/Draft.js",
+  "jsnext:main": "src/Draft.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "compile": "babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "babel": {
+    "presets": [
+      "metal-jsx"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "draft-js": "^0.7.0",
+    "metal-incremental-dom": "^1.0.0-rc.33",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-metal-jsx": "^0.0.2",
+    "webpack": "^1.13.0"
+  }
+}
