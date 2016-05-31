@@ -15,7 +15,7 @@ var Draft = bridge(Editor);
  * This is an example of usage that basically renders Draft.js and enables
  * some key shortcuts for rich text editing.
  */
-class Example extends JSXComponent {
+class SimpleExample extends JSXComponent {
 	created() {
 		this.handleKeyCommand = this.handleKeyCommand.bind(this);
 		this.onChange = this.onChange.bind(this);
@@ -43,7 +43,7 @@ class Example extends JSXComponent {
 	}
 }
 
-Example.STATE = {
+SimpleExample.STATE = {
 	editorState: {
 		value: EditorState.createEmpty()
 	}
@@ -56,6 +56,6 @@ Example.STATE = {
  * to true makes everything work as expected, making sure that Drag.js doesn't
  * miss any editor state change due to batching.
  */
-Example.SYNC_UPDATES = true;
+SimpleExample.SYNC_UPDATES = true;
 
-export default Example;
+export default SimpleExample;

@@ -8,8 +8,8 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/Example.js",
-  "jsnext:main": "src/Example.js",
+  "main": "lib/Examples.js",
+  "jsnext:main": "src/Examples.js",
   "files": [
     "lib",
     "src",
