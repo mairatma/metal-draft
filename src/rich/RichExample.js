@@ -15,8 +15,10 @@ import { Map } from 'immutable';
 var Draft = bridge(Editor);
 
 /**
- * This is an example of usage that basically renders Draft.js and enables
- * some key shortcuts for rich text editing.
+ * This is an example of usage that basically renders Draft.js with some
+ * buttons that enable rich editing, besides keyboard commands.
+ * Note that this follows the same example that can be seen at
+ * https://github.com/facebook/draft-js/blob/master/examples/rich/rich.html.
  */
 class RichExample extends JSXComponent {
 	created() {
