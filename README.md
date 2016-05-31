@@ -19,4 +19,7 @@ can find it [here](https://nodejs.org).
   npm run build
   ```
 
-4. Open the demo at demos/index.html on your browser.
+4. Open the demos on your browser:
+
+  * Simple demo at **demos/index.html**
+  * Rich demo at **demos/rich.html**
