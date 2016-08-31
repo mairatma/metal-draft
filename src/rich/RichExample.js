@@ -75,7 +75,7 @@ class RichExample extends JSXComponent {
 	          handleKeyCommand={this.handleKeyCommand}
 	          onChange={this.onChange}
 	          placeholder="Tell a story..."
-	          key="editor"
+	          ref="editor"
 	          spellCheck={true}
 	        />
 	      </div>
