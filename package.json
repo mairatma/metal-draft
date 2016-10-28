@@ -31,9 +31,8 @@
   },
   "dependencies": {
     "draft-js": "^0.7.0",
-    "metal-incremental-dom": "^1.0.0-rc.33",
-    "metal-jsx": "^1.0.0-rc.2",
-    "metal-react": "^0.1.0"
+    "metal-jsx": "^2.0.0",
+    "metal-react": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",

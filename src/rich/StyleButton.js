@@ -9,18 +9,18 @@ class StyleButton extends JSXComponent {
 
   onToggle(e) {
     e.preventDefault();
-    this.config.onToggle(this.config.style);
+    this.props.onToggle(this.props.style);
   }
 
   render() {
     let className = 'RichEditor-styleButton';
-    if (this.config.active) {
+    if (this.props.active) {
       className += ' RichEditor-activeButton';
     }
 
     return (
       <span class={className} data-onmousedown={this.onToggle}>
-        {this.config.label}
+        {this.props.label}
       </span>
     );
   }

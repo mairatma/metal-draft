@@ -34,7 +34,7 @@ class RichExample extends JSXComponent {
 	}
 
 	handleKeyCommand(command) {
-		const newState = RichUtils.handleKeyCommand(this.editorState, command);
+		const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
     if (newState) {
       this.onChange(newState);
       return true;
@@ -43,14 +43,14 @@ class RichExample extends JSXComponent {
 	}
 
 	onChange(editorState) {
-		this.editorState = editorState;
+		this.state.editorState = editorState;
 	}
 
 	render() {
 		// If the user changes block type before entering any text, we can
     // either style the placeholder or hide it. Let's just hide it now.
     let className = 'RichEditor-editor';
-    var contentState = this.editorState.getCurrentContent();
+    var contentState = this.state.editorState.getCurrentContent();
     if (!contentState.hasText()) {
       if (contentState.getBlockMap().first().getType() !== 'unstyled') {
         className += ' RichEditor-hidePlaceholder';
@@ -60,18 +60,18 @@ class RichExample extends JSXComponent {
     return (
       <div class="RichEditor-root">
         <BlockStyleControls
-          editorState={this.editorState}
+          editorState={this.state.editorState}
           onToggle={this.toggleBlockType}
         />
         <InlineStyleControls
-          editorState={this.editorState}
+          editorState={this.state.editorState}
           onToggle={this.toggleInlineStyle}
         />
 				<div class={className} data-onclick={this.focus}>
 	        <Draft
 	          blockStyleFn={getBlockStyle}
 	          customStyleMap={styleMap}
-	          editorState={this.editorState}
+	          editorState={this.state.editorState}
 	          handleKeyCommand={this.handleKeyCommand}
 	          onChange={this.onChange}
 	          placeholder="Tell a story..."
@@ -86,7 +86,7 @@ class RichExample extends JSXComponent {
 	toggleBlockType(blockType) {
 		this.onChange(
       RichUtils.toggleBlockType(
-        this.editorState,
+        this.state.editorState,
         blockType
       )
     );
@@ -95,7 +95,7 @@ class RichExample extends JSXComponent {
 	toggleInlineStyle(inlineStyle) {
 		this.onChange(
       RichUtils.toggleInlineStyle(
-        this.editorState,
+        this.state.editorState,
         inlineStyle
       )
     );

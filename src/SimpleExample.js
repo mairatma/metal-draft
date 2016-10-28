@@ -22,7 +22,7 @@ class SimpleExample extends JSXComponent {
 	}
 
 	handleKeyCommand(command) {
-		const newState = RichUtils.handleKeyCommand(this.editorState, command);
+		const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
     if (newState) {
       this.onChange(newState);
       return true;
@@ -31,12 +31,12 @@ class SimpleExample extends JSXComponent {
 	}
 
 	onChange(editorState) {
-		this.editorState = editorState;
+		this.state.editorState = editorState;
 	}
 
 	render() {
 		return <Draft
-      editorState={this.editorState}
+      editorState={this.state.editorState}
 			handleKeyCommand={this.handleKeyCommand}
       onChange={this.onChange}
     />;
